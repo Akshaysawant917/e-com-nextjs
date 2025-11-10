@@ -18,6 +18,7 @@ export default function Navbar() {
           <Link href="/product" className="hover:text-gray-600">Backpack</Link>
           <Link href="/about" className="hover:text-gray-600">About</Link>
           <Link href="/contact" className="hover:text-gray-600">Contact</Link>
+          <Link href="/cart" className="hover:text-gray-600">Cart</Link>
         </div>
 
         <button
@@ -34,6 +35,7 @@ export default function Navbar() {
           <Link href="/product" onClick={() => setOpen(false)}>Backpack</Link>
           <Link href="/about" onClick={() => setOpen(false)}>About</Link>
           <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
+          <Link href="/cart" onClick={() => setOpen(false)}>Cart</Link>
         </div>
       )}
     </nav>
