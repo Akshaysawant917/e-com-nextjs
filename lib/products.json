@@ -6,9 +6,9 @@
       "category": "flower",
       "price": 299,
       "images": [
-        "/images/flower1.jpg",
-        "/images/flower1.jpg",
-        "/images/flower1.jpg"
+        "/products/flower1.webp",
+        "/products/flower1.webp",
+        "/products/flower1.webp"
       ]
     },
     {
@@ -17,9 +17,9 @@
       "category": "flower",
       "price": 349,
       "images": [
-        "/images/flower2.jpg",
-        "/images/flower2.jpg",
-        "/images/flower2.jpg"
+        "/products/flower2.webp",
+        "/products/flower2.webp",
+        "/products/flower2.webp"
       ]
     },
     {
@@ -28,9 +28,9 @@
       "category": "flower",
       "price": 259,
       "images": [
-        "/images/flower3.jpg",
-        "/images/flower3.jpg",
-        "/images/flower3.jpg"
+        "/products/flower3.webp",
+        "/products/flower3.webp",
+        "/products/flower3.webp"
       ]
     },
     {
@@ -50,7 +50,7 @@
       "category": "flower",
       "price": 299,
       "images": [
-        "/images/flower5.jpg",
+        "/products/flower5.webp",
         "/images/flower5.jpg",
         "/images/flower5.jpg"
       ]
@@ -61,7 +61,7 @@
       "category": "keychain",
       "price": 199,
       "images": [
-        "/images/keychain1.jpg",
+        "/products/keychain1.webp",
         "/images/keychain1.jpg",
         "/images/keychain1.jpg"
       ]
@@ -72,7 +72,7 @@
       "category": "keychain",
       "price": 249,
       "images": [
-        "/images/keychain2.jpg",
+        "/products/keychain2.webp",
         "/images/keychain2.jpg",
         "/images/keychain2.jpg"
       ]

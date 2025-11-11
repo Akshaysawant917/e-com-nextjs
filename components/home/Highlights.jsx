@@ -1,35 +1,38 @@
-import { Diamond, Droplets, Backpack, Leaf } from "lucide-react";
+import { Heart, HandHeart, Leaf, Sparkles } from "lucide-react";
 
 const features = [
   {
-    icon: <Diamond className="w-8 h-8 text-gray-900" />,
-    title: "Premium Quality",
-    desc: "Crafted with top-grade materials that ensure durability and style for years.",
+    icon: <HandHeart className="w-8 h-8 text-rose-500" />,
+    title: "Handcrafted with Love",
+    desc: "Each product is carefully crocheted by artisans — unique, detailed, and full of warmth.",
   },
   {
-    icon: <Backpack className="w-8 h-8 text-gray-900" />,
-    title: "Smart Storage",
-    desc: "Thoughtfully designed compartments for your laptop, travel gear, and essentials.",
+    icon: <Sparkles className="w-8 h-8 text-rose-500" />,
+    title: "One-of-a-Kind Designs",
+    desc: "Beautiful crochet patterns that bring charm and creativity to your everyday life.",
   },
   {
-    icon: <Droplets className="w-8 h-8 text-gray-900" />,
-    title: "Water Resistant",
-    desc: "Protects your valuables from rain or accidental spills during your adventures.",
+    icon: <Leaf className="w-8 h-8 text-rose-500" />,
+    title: "Eco-Friendly Threads",
+    desc: "We use sustainable, cruelty-free yarn that’s gentle on your skin and the planet.",
   },
   {
-    icon: <Leaf className="w-8 h-8 text-gray-900" />,
-    title: "Eco Friendly",
-    desc: "Made using sustainable, cruelty-free materials that care for the planet.",
+    icon: <Heart className="w-8 h-8 text-rose-500" />,
+    title: "Made with Passion",
+    desc: "Kalactive is powered by creativity and love for handmade art — made just for you.",
   },
 ];
 
 export default function Highlights() {
   return (
-    <section className="">
+    <section className="py-16 mt-20 bg-gradient-to-b from-rose-50 to-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-4">Designed for Modern Life</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+          Crafted for Crochet Lovers
+        </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Every ClassyPack backpack is built to match your pace — elegant, practical, and ready for anything.
+          Every Kalactive creation is handmade to perfection — cozy, sustainable, and
+          made to bring joy to your space.
         </p>
 
         {/* Features Grid */}
@@ -37,10 +40,10 @@ export default function Highlights() {
           {features.map((f, i) => (
             <div
               key={i}
-              className="flex flex-col items-center text-center space-y-3 p-6 bg-white/60 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition"
+              className="flex flex-col items-center text-center space-y-3 p-6 bg-white rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-200"
             >
-              <div className="p-4 bg-gray-100 rounded-full">{f.icon}</div>
-              <h3 className="text-lg font-semibold">{f.title}</h3>
+              <div className="p-4 bg-rose-100 rounded-full">{f.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-800">{f.title}</h3>
               <p className="text-gray-600 text-sm">{f.desc}</p>
             </div>
           ))}

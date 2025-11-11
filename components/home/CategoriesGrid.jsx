@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 const categories = [
-  { title: "Mobile", img: "/backpack.webp" },
-  { title: "Headphone", img: "/backpack.webp" },
-  { title: "Tablets", img: "/backpack.webp" },
-  { title: "Laptop", img: "/backpack.webp" },
-  { title: "Speakers", img: "/backpack.webp" },
-  { title: "More", img: "/backpack.webp" },
+  { title: "Flowers", img: "/products/flower4.webp" },
+  { title: "keychains", img: "/products/keychain1.webp" },
+  { title: "Mobile Pouchs", img: "/products/mobile3.webp" },
+  { title: "Toys", img: "/products/toy1.webp" },
+  { title: "Mobile Keychain", img: "/products/mobile-chain1.webp" },
+  { title: "Bags", img: "/products/mobile1.webp" },
 ];
 
 export default function CategoriesGrid() {

@@ -5,14 +5,14 @@ function formatINR(value) {
   return new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR" }).format(value);
 }
 
-export default function FlashDeals() {  
-  const deals = productsData.products.slice(0, 3);
+export default function MostSelling() {  
+  const deals = productsData.products.slice(4, 7);
 
   return (
     <section className="w-full px-4 mt-6">
       <div className="max-w-md md:max-w-4xl lg:max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-3">
-          <h4 className="text-base md:text-lg font-semibold">Flash Deals for You</h4>
+          <h4 className="text-base md:text-lg font-semibold">Most Selling Itemss</h4>
           <a href="/deals" className="text-sm text-rose-600">See All</a>
         </div>
 
