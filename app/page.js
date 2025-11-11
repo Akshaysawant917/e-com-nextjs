@@ -1,22 +1,17 @@
-import Hero from "../components/Hero";
-import Highlights from "../components/Highlights";
-import Showcase from "../components/Showcase";
-// import CTA from "./components/CTA";
-
-import BannerCard from "../components/BannerCard";
-import CategoriesGrid from "../components/CategoriesGrid";
-import FlashDeals from "../components/FlashDeals";
+import Highlights from "../components/home/Highlights";
+import Showcase from "../components/home/Showcase";
+import BannerCard from "../components/home/BannerCard";
+import CategoriesGrid from "../components/home/CategoriesGrid";
+import FlashDeals from "../components/home/FlashDeals";
 
 export default function Home() {
   return (
     <main>
-      {/* <MobileNavbar cartCount={2} /> */}
       <BannerCard />
       <CategoriesGrid />
       <FlashDeals />
-      {/* <Hero />
       <Highlights />
-      <Showcase /> */}
+      <Showcase />
     </main>
   );
 }

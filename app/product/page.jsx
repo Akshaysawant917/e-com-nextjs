@@ -1,5 +1,5 @@
-import ProductGallery from "../../components/ProductGallery";
-import ProductInfo from "../../components/ProductInfo";
+import ProductGallery from "../../components/product/ProductGallery";
+import ProductInfo from "../../components/product/ProductInfo";
 import { product } from "../../lib/data";
 
 export default function ProductPage() {
