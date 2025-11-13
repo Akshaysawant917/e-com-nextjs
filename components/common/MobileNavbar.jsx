@@ -61,7 +61,7 @@ export default function Navbar({ cartCount = 0 }) {
         <div className="md:hidden bg-white shadow-md px-4 py-3" role="dialog" aria-modal="true">
           <div className="flex flex-col gap-3">
             <Link href="/" className="py-2" onClick={() => setOpen(false)}>Home</Link>
-            <Link href="/shop" className="py-2" onClick={() => setOpen(false)}>Shop</Link>
+            <Link href="/product" className="py-2" onClick={() => setOpen(false)}>Shop</Link>
             <Link href="/about" className="py-2" onClick={() => setOpen(false)}>About</Link>
             <Link href="/contact" className="py-2" onClick={() => setOpen(false)}>Contact</Link>
           </div>
@@ -97,7 +97,7 @@ export default function Navbar({ cartCount = 0 }) {
             <div className="flex items-center gap-6">
               <nav className="hidden lg:flex items-center gap-6 text-sm">
                 <Link href="/" className="hover:text-rose-600 transition-colors">Home</Link>
-                <Link href="/shop" className="hover:text-rose-600 transition-colors">Shop</Link>
+                <Link href="/product" className="hover:text-rose-600 transition-colors">Shop</Link>
                 <Link href="/about" className="hover:text-rose-600 transition-colors">About</Link>
                 <Link href="/contact" className="hover:text-rose-600 transition-colors">Contact</Link>
               </nav>

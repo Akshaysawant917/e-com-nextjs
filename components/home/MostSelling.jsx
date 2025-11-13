@@ -1,11 +1,14 @@
+"use client";
 import Image from "next/image";
 import productsData from "@/lib/products.json";
+import { useRouter } from "next/navigation";
 
 function formatINR(value) {
   return new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR" }).format(value);
 }
 
 export default function MostSelling() {
+    const router = useRouter();
   const deals = productsData.products.slice(4, 7);
 
   return (
@@ -61,6 +64,7 @@ export default function MostSelling() {
                   <button
                     aria-label={`Buy ${d.name}`}
                     className="bg-rose-600 hover:bg-rose-500 text-white px-4 py-1.5 rounded-full text-sm font-medium transition"
+                      onClick={() => router.push(`/product/${d.id}`)}
                   >
                     Buy
                   </button>

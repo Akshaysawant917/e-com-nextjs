@@ -72,7 +72,7 @@ export default function Showcase() {
         {/* CTA */}
         <div className="mt-8 text-center">
           <a
-            href="/shop"
+            href="/product"
             className="inline-block bg-rose-600 hover:bg-rose-500 text-white px-6 py-3 rounded-full font-medium shadow-md transition-transform hover:-translate-y-0.5"
           >
             Explore the Collection

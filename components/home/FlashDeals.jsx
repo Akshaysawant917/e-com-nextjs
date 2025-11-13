@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import productsData from "@/lib/products.json";
+import { useRouter } from "next/navigation";
 
 function formatINR(value) {
   return new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR" }).format(value);
@@ -7,6 +9,7 @@ function formatINR(value) {
 
 export default function FlashDeals() {
   const deals = productsData.products.slice(0, 3);
+  const router = useRouter();
 
   return (
     <section className="w-full px-4 mt-10">
@@ -62,6 +65,8 @@ export default function FlashDeals() {
                   <button
                     aria-label={`Buy ${d.name}`}
                     className="bg-rose-600 hover:bg-rose-500 text-white px-4 py-1.5 rounded-full text-sm font-medium transition"
+                    onClick={() => router.push(`/product/${d.id}`)}
+
                   >
                     Buy
                   </button>

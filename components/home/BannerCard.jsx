@@ -14,7 +14,7 @@ export default function BannerCard() {
             Discover beautiful handmade crochet creations — flowers, keychains, toys & more by Kalactive.
           </p>
           <a
-            href="/shop"
+            href="/product"
             className="inline-block mt-4 md:mt-6 bg-white text-rose-600 px-4 py-2 md:px-6 md:py-3 rounded-full font-medium shadow hover:scale-105 hover:bg-rose-50 transition-transform"
           >
             Explore Collection

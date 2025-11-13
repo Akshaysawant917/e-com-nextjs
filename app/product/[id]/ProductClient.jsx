@@ -5,7 +5,6 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import productsData from "@/lib/products.json";
 
-/* ---------- helpers ---------- */
 function formatINR(v) {
   return new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR" }).format(v);
 }
@@ -15,21 +14,18 @@ function calcDiscount(oldPrice, price) {
   return Math.round((diff / oldPrice) * 100);
 }
 
-/* ---------- component ---------- */
 export default function ProductClient({ product }) {
   const [mainIdx, setMainIdx] = useState(0);
   const [qty, setQty] = useState(1);
-  const [toast, setToast] = useState(null); // { msg, visible }
+  const [toast, setToast] = useState(null);
   const images = product.images && product.images.length ? product.images : ["/images/placeholder.jpg"];
 
-  // related: pick up to 4 from same category excluding self
   const related = useMemo(() => {
     return (productsData.products || [])
       .filter((p) => p.category === product.category && p.id !== product.id)
       .slice(0, 4);
   }, [product]);
 
-  // auto-hide toast
   useEffect(() => {
     if (!toast?.visible) return;
     const t = setTimeout(() => setToast(null), 2400);
