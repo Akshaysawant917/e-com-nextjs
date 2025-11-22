@@ -28,7 +28,7 @@ export default function MostSelling() {
         </div>
 
         {/* Product Grid */}
-        <div className="flex gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible">
+        <div className="flex gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible no-scrollbar">
           {deals.map((d) => (
             <article
               key={d.id}

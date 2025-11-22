@@ -11,8 +11,8 @@ export default function Home() {
       <BannerCard />
       <CategoriesGrid />
       <FlashDeals />
-      <Highlights />
       <MostSelling />
+      <Highlights />
       <Showcase />
     </main>
   );

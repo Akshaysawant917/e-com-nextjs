@@ -10,7 +10,7 @@ export default function BannerCard() {
           <h3 className="text-lg md:text-3xl lg:text-4xl font-semibold md:font-bold tracking-tight">
             Handcrafted with Love ❤️
           </h3>
-          <p className="text-sm md:text-lg text-rose-100/90 mt-2 md:mt-4 max-w-md">
+          <p className="text-sm md:text-lg text-rose-100/90 mt-2 md:mt-4 max-w-72 ">
             Discover beautiful handmade crochet creations — flowers, keychains, toys & more by Kalactive.
           </p>
           <a
@@ -22,7 +22,7 @@ export default function BannerCard() {
         </div>
 
         {/* ---- Right: Image ---- */}
-        <div className="absolute md:static right-0 top-0 w-40 h-28 md:w-1/4  md:h-full">
+        <div className="absolute md:static right-[-20px] top-5 w-30 h-28 md:w-1/4 md:h-full">
           <Image
             src={banner}
             alt="Kalactive crochet handmade products banner"

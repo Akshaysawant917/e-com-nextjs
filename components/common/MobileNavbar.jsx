@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Search, Camera, ShoppingCart, Menu, X } from "lucide-react";
+import Image from "next/image";
+
 
 export default function Navbar({ cartCount = 0 }) {
   const [q, setQ] = useState("");
@@ -10,27 +12,34 @@ export default function Navbar({ cartCount = 0 }) {
   return (
     <header className="w-full bg-transparent">
       {/* MOBILE HEADER */}
-      <div className="md:hidden px-4 pb-3 pt-4">
+      <div className="md:hidden px-4 pb-3 pt-0">
         <div className="max-w-md mx-auto">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-between gap-3">
             {/* Search box */}
-            <div className="flex-1">
-              <div className="flex items-center bg-white rounded-2xl shadow-sm px-3 py-2">
-                <Search className="w-5 h-5 text-gray-400" aria-hidden />
-                <input
-                  className="ml-3 placeholder-gray-400 outline-none w-full text-sm bg-transparent"
-                  placeholder="Search Kalactive"
-                  value={q}
-                  onChange={(e) => setQ(e.target.value)}
-                  aria-label="Search products"
-                />
-                <button type="button" className="ml-2" aria-label="Camera search">
-                  <Camera className="w-5 h-5 text-gray-400" />
-                </button>
-              </div>
-            </div>
+            <button
+              type="button"
+              className="ml-2 bg-white p-2 rounded-full shadow-sm"
+              onClick={() => setOpen((s) => !s)}
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+            >
+              {open ? <X className="w-5 h-5 text-gray-700" /> : <Menu className="w-5 h-5 text-gray-700" />}
+            </button>
 
+            {/* <div className="flex gap-4"> */}
             {/* Cart icon */}
+
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="Kalactive Logo"
+                width={120}
+                height={40}
+                className="w-auto h-20 object-contain"
+                priority
+              />
+            </Link>
+
             <Link href="/cart" className="relative" aria-label="Open cart">
               <div className="bg-white p-2 rounded-full shadow-sm">
                 <ShoppingCart className="w-5 h-5 text-gray-700" />
@@ -41,16 +50,23 @@ export default function Navbar({ cartCount = 0 }) {
                 </div>
               )}
             </Link>
-
             {/* Mobile menu toggle */}
-            <button
-              type="button"
-              className="ml-2 bg-white p-2 rounded-full shadow-sm"
-              onClick={() => setOpen((s) => !s)}
-              aria-label={open ? "Close menu" : "Open menu"}
-              aria-expanded={open}
-            >
-              {open ? <X className="w-5 h-5 text-gray-700" /> : <Menu className="w-5 h-5 text-gray-700" />}
+
+            {/* </div> */}
+          </div>
+        </div>
+        <div className="flex-1">
+          <div className="flex items-center bg-white rounded-2xl shadow-sm px-3 py-2">
+            <Search className="w-5 h-5 text-gray-400" aria-hidden />
+            <input
+              className="ml-3 placeholder-gray-400 outline-none w-full text-sm bg-transparent"
+              placeholder="Search Kalactive"
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              aria-label="Search products"
+            />
+            <button type="button" className="ml-2" aria-label="Camera search">
+              <Camera className="w-5 h-5 text-gray-400" />
             </button>
           </div>
         </div>
@@ -74,9 +90,17 @@ export default function Navbar({ cartCount = 0 }) {
           <div className="flex items-center justify-between py-4">
             {/* Brand + search */}
             <div className="flex items-center gap-6">
-              <Link href="/" className="text-xl font-semibold text-rose-600">
-                Kalactive
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/logo.png"
+                  alt="Kalactive Logo"
+                  width={120}
+                  height={40}
+                  className="w-auto h-20 object-contain"
+                  priority
+                />
               </Link>
+
 
               <div className="hidden lg:flex items-center bg-white rounded-full shadow px-4 py-2 w-[520px]">
                 <Search className="w-5 h-5 text-gray-400" />

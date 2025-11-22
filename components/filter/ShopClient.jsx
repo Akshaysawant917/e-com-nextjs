@@ -7,7 +7,7 @@ import ShopFilters from "./ShopFilters";
 export default function ShopClient({ rawProducts = [],defaultCategory = null }) {
   const [filters, setFilters] = useState({
     q: "",
-    category: defaultCategory,
+    category: defaultCategory, 
     minPrice: null,
     maxPrice: null,
     sort: "relevance",
